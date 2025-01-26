@@ -1,0 +1,302 @@
+._bunhae_1ebi8_1 {
+	display: inline-block;
+	--current-color: currentColor;
+
+	svg path {
+		paint-order: stroke fill;
+		transform: scale(1, -1);
+		translate: 0 100%;
+
+		&[part="initial"] {
+			fill: var(--initial-color, currentColor);
+		}
+
+		&[part="medial"] {
+			fill: var(--medial-color, currentColor);
+		}
+
+		&[part="medial-secondary"] {
+			fill: var(--medial-secondary-color, var(--medial-color));
+		}
+
+		&[part="final"] {
+			fill: var(--final-color, currentColor);
+		}
+
+		&[part="final-secondary"] {
+			fill: var(--final-secondary-color, var(--final-color));
+		}
+	}
+
+	::selection {
+		background-color: #0074ffcc;
+	}
+
+	/* container */
+	& > span {
+		/* segments */
+		& > span {
+			position: relative;
+			display: inline-block;
+
+			&[flag="0"] svg path,
+			
+			/* 1 0 0 0 0 */
+			/* &[flag="1"] svg path[part="initial"], */
+			&[flag="1"] svg path[part="medial"],
+			&[flag="1"] svg path[part="medial-secondary"],
+			&[flag="1"] svg path[part="final"],
+			&[flag="1"] svg path[part="final-secondary"],
+
+			/* 0 1 0 0 0 */
+			&[flag="2"] svg path[part="initial"],
+			/* &[flag="2"] svg path[part="medial"], */
+			&[flag="2"] svg path[part="medial-secondary"],
+			&[flag="2"] svg path[part="final"],
+			&[flag="2"] svg path[part="final-secondary"],
+
+			/* 1 1 0 0 0 */
+			/* &[flag="3"] svg path[part="initial"], */
+			/* &[flag="3"] svg path[part="medial"], */
+			&[flag="3"] svg path[part="medial-secondary"],
+			&[flag="3"] svg path[part="final"],
+			&[flag="3"] svg path[part="final-secondary"],
+
+			/* 0 0 1 0 0 */
+			&[flag="4"] svg path[part="initial"],
+			&[flag="4"] svg path[part="medial"],
+			/* &[flag="4"] svg path[part="medial-secondary"], */
+			&[flag="4"] svg path[part="final"],
+			&[flag="4"] svg path[part="final-secondary"],
+
+			/* 1 0 1 0 0 */
+			/* &[flag="5"] svg path[part="initial"], */
+			&[flag="5"] svg path[part="medial"],
+			/* &[flag="5"] svg path[part="medial-secondary"], */
+			&[flag="5"] svg path[part="final"],
+			&[flag="5"] svg path[part="final-secondary"],
+
+			/* 0 1 1 0 0 */
+			&[flag="6"] svg path[part="initial"],
+			/* &[flag="6"] svg path[part="medial"], */
+			/* &[flag="6"] svg path[part="medial-secondary"], */
+			&[flag="6"] svg path[part="final"],
+			&[flag="6"] svg path[part="final-secondary"],
+
+			/* 1 1 1 0 0 */
+			/* &[flag="7"] svg path[part="initial"], */
+			/* &[flag="7"] svg path[part="medial"], */
+			/* &[flag="7"] svg path[part="medial-secondary"], */
+			&[flag="7"] svg path[part="final"],
+			&[flag="7"] svg path[part="final-secondary"],
+
+			/* 0 0 0 1 0 */
+			&[flag="8"] svg path[part="initial"],
+			&[flag="8"] svg path[part="medial"],
+			&[flag="8"] svg path[part="medial-secondary"],
+			/* &[flag="8"] svg path[part="final"], */
+			&[flag="8"] svg path[part="final-secondary"],
+
+			/* 1 0 0 1 0 */
+			/* &[flag="9"] svg path[part="initial"], */
+			&[flag="9"] svg path[part="medial"],
+			&[flag="9"] svg path[part="medial-secondary"],
+			/* &[flag="9"] svg path[part="final"], */
+			&[flag="9"] svg path[part="final-secondary"],
+
+			/* 0 1 0 1 0 */
+			&[flag="a"] svg path[part="initial"],
+			/* &[flag="a"] svg path[part="medial"], */
+			&[flag="a"] svg path[part="medial-secondary"],
+			/* &[flag="a"] svg path[part="final"], */
+			&[flag="a"] svg path[part="final-secondary"],
+
+			/* 1 1 0 1 0 */
+			/* &[flag="b"] svg path[part="initial"], */
+			/* &[flag="b"] svg path[part="medial"], */
+			&[flag="b"] svg path[part="medial-secondary"],
+			/* &[flag="b"] svg path[part="final"], */
+			&[flag="b"] svg path[part="final-secondary"],
+
+			/* 0 0 1 1 0 */
+			&[flag="c"] svg path[part="initial"],
+			&[flag="c"] svg path[part="medial"],
+			/* &[flag="c"] svg path[part="medial-secondary"], */
+			/* &[flag="c"] svg path[part="final"], */
+			&[flag="c"] svg path[part="final-secondary"],
+
+			/* 1 0 1 1 0 */
+			/* &[flag="d"] svg path[part="initial"], */
+			&[flag="d"] svg path[part="medial"],
+			/* &[flag="d"] svg path[part="medial-secondary"], */
+			/* &[flag="d"] svg path[part="final"], */
+			&[flag="d"] svg path[part="final-secondary"],
+
+			/* 0 1 1 1 0 */
+			&[flag="e"] svg path[part="initial"],
+			/* &[flag="e"] svg path[part="medial"], */
+			/* &[flag="e"] svg path[part="medial-secondary"], */
+			/* &[flag="e"] svg path[part="final"], */
+			&[flag="e"] svg path[part="final-secondary"],
+
+			/* 1 1 1 1 0 */
+			/* &[flag="f"] svg path[part="initial"], */
+			/* &[flag="f"] svg path[part="medial"], */
+			/* &[flag="f"] svg path[part="medial-secondary"], */
+			/* &[flag="f"] svg path[part="final"], */
+			&[flag="f"] svg path[part="final-secondary"],
+
+			/* 0 0 0 0 1 */
+			&[flag="g"] svg path[part="initial"],
+			&[flag="g"] svg path[part="medial"],
+			&[flag="g"] svg path[part="medial-secondary"],
+			&[flag="g"] svg path[part="final"],
+			/* &[flag="g"] svg path[part="final-secondary"], */
+
+			/* 1 0 0 0 1 */
+			/* &[flag="h"] svg path[part="initial"], */
+			&[flag="h"] svg path[part="medial"],
+			&[flag="h"] svg path[part="medial-secondary"],
+			&[flag="h"] svg path[part="final"],
+			/* &[flag="h"] svg path[part="final-secondary"], */
+
+			/* 0 1 0 0 1 */
+			&[flag="i"] svg path[part="initial"],
+			/* &[flag="i"] svg path[part="medial"], */
+			&[flag="i"] svg path[part="medial-secondary"],
+			&[flag="i"] svg path[part="final"],
+			/* &[flag="i"] svg path[part="final-secondary"], */
+
+			/* 1 1 0 0 1 */
+			/* &[flag="j"] svg path[part="initial"], */
+			/* &[flag="j"] svg path[part="medial"], */
+			&[flag="j"] svg path[part="medial-secondary"],
+			&[flag="j"] svg path[part="final"],
+			/* &[flag="j"] svg path[part="final-secondary"], */
+
+			/* 0 0 1 0 1 */
+			&[flag="k"] svg path[part="initial"],
+			&[flag="k"] svg path[part="medial"],
+			/* &[flag="k"] svg path[part="medial-secondary"], */
+			&[flag="k"] svg path[part="final"],
+			/* &[flag="k"] svg path[part="final-secondary"], */
+
+			/* 1 0 1 0 1 */
+			/* &[flag="l"] svg path[part="initial"], */
+			&[flag="l"] svg path[part="medial"],
+			/* &[flag="l"] svg path[part="medial-secondary"], */
+			&[flag="l"] svg path[part="final"],
+			/* &[flag="l"] svg path[part="final-secondary"], */
+
+			/* 0 1 1 0 1 */
+			&[flag="m"] svg path[part="initial"],
+			/* &[flag="m"] svg path[part="medial"], */
+			/* &[flag="m"] svg path[part="medial-secondary"], */
+			&[flag="m"] svg path[part="final"],
+			/* &[flag="m"] svg path[part="final-secondary"], */
+
+			/* 1 1 1 0 1 */
+			/* &[flag="n"] svg path[part="initial"], */
+			/* &[flag="n"] svg path[part="medial"], */
+			/* &[flag="n"] svg path[part="medial-secondary"], */
+			&[flag="n"] svg path[part="final"],
+			/* &[flag="n"] svg path[part="final-secondary"], */
+
+			/* 0 0 0 1 1 */
+			&[flag="o"] svg path[part="initial"],
+			&[flag="o"] svg path[part="medial"],
+			&[flag="o"] svg path[part="medial-secondary"],
+			/* &[flag="o"] svg path[part="final"], */
+			/* &[flag="o"] svg path[part="final-secondary"], */
+
+			/* 1 0 0 1 1 */
+			/* &[flag="p"] svg path[part="initial"], */
+			&[flag="p"] svg path[part="medial"],
+			&[flag="p"] svg path[part="medial-secondary"],
+			/* &[flag="p"] svg path[part="final"], */
+			/* &[flag="p"] svg path[part="final-secondary"], */
+
+			/* 0 1 0 1 1 */
+			&[flag="q"] svg path[part="initial"],
+			/* &[flag="q"] svg path[part="medial"], */
+			&[flag="q"] svg path[part="medial-secondary"],
+			/* &[flag="q"] svg path[part="final"], */
+			/* &[flag="q"] svg path[part="final-secondary"], */
+
+			/* 1 1 0 1 1 */
+			/* &[flag="r"] svg path[part="initial"], */
+			/* &[flag="r"] svg path[part="medial"], */
+			&[flag="r"] svg path[part="medial-secondary"],
+			/* &[flag="r"] svg path[part="final"], */
+			/* &[flag="r"] svg path[part="final-secondary"], */
+
+			/* 0 0 1 1 1 */
+			&[flag="s"] svg path[part="initial"],
+			&[flag="s"] svg path[part="medial"],
+			/* &[flag="s"] svg path[part="medial-secondary"], */
+			/* &[flag="s"] svg path[part="final"], */
+			/* &[flag="s"] svg path[part="final-secondary"], */
+
+			/* 1 0 1 1 1 */
+			/* &[flag="t"] svg path[part="initial"], */
+			&[flag="t"] svg path[part="medial"],
+			/* &[flag="t"] svg path[part="medial-secondary"], */
+			/* &[flag="t"] svg path[part="final"], */
+			/* &[flag="t"] svg path[part="final-secondary"], */
+
+			/* 0 1 1 1 1 */
+			&[flag="u"] svg path[part="initial"],
+			/* &[flag="u"] svg path[part="medial"], */
+			/* &[flag="u"] svg path[part="medial-secondary"], */
+			/* &[flag="u"] svg path[part="final"], */
+			/* &[flag="u"] svg path[part="final-secondary"], */
+
+			/* 1 1 1 1 1 */
+			/* &[flag="v"] svg path[part="initial"], */
+			/* &[flag="v"] svg path[part="medial"], */
+			/* &[flag="v"] svg path[part="medial-secondary"], */
+			/* &[flag="v"] svg path[part="final"], */
+			/* &[flag="v"] svg path[part="final-secondary"], */
+					
+			nomatchwithtrailingcomman {
+				stroke-width: 0 !important;
+				fill: currentColor !important;
+			}
+
+			svg {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				pointer-events: none;
+			}
+
+			span {
+				color: var(--text-color, var(--initial-color, currentColor));
+			}
+
+			&[flag="0"] span,
+			&[flag="2"] span,
+			&[flag="4"] span,
+			&[flag="6"] span,
+			&[flag="8"] span,
+			&[flag="a"] span,
+			&[flag="c"] span,
+			&[flag="e"] span,
+			&[flag="g"] span,
+			&[flag="i"] span,
+			&[flag="k"] span,
+			&[flag="m"] span,
+			&[flag="o"] span,
+			&[flag="q"] span,
+			&[flag="s"] span,
+			&[flag="u"] span {
+				color: currentColor !important;
+			}
+
+			&[flag] svg ~ span,
+			&:not([flag]) svg ~ span {
+				color: transparent !important;
+			}
+		}
+	}
+}
