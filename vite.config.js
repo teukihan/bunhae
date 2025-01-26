@@ -15,13 +15,13 @@ export default defineConfig(async (args) => {
 		await fs.promises.writeFile("generated/bunhae.module.css", css);
 	}
 
-	if (args.mode == "demo") {
+	if (args.mode == "docs") {
 		return {
 			base: "./",
 			plugins: [svelte()],
 			build: {
 				target: "esnext",
-				outDir: "demo",
+				outDir: "docs",
 				chunkSizeWarningLimit: 1000,
 				rollupOptions: {
 					external: [
